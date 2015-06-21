@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 for file in $PWD/dotfiles/*; do
     if [[ ! -L "$HOME/.$(basename $file)" ]]; then
