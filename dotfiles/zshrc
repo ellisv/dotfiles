@@ -92,3 +92,16 @@ if [[ -d "$HOME/.rbenv" ]]; then
     export PATH="$HOME/.rbenv/bin:$PATH"
     eval "$(rbenv init -)"
 fi
+
+# Import phpbrew
+if [[ -f ~/.phpbrew/bashrc ]]; then
+    source ~/.phpbrew/bashrc
+fi
+
+# OXID Aliases
+alias keepass="gnome-open ~/Documents/keepass-repository"
+
+# Use binary files from composer
+if [[ -d ~/.composer/vendor/bin ]]; then
+    export PATH=~/.composer/vendor/bin:$PATH
+fi
