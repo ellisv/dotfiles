@@ -4,7 +4,7 @@
 #$ mdbus2 org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer
 
 trim_method="trim" 	# Can be {trim or roll).
-max_len=40		# Trim output to this length.
+max_len=35		# Trim output to this length.
 roll_speed=2		# Roll speed in chraacters per second.
 
 metadata=$(dbus-send --reply-timeout=42 --print-reply --dest=org.mpris.MediaPlayer2.spotify / org.freedesktop.MediaPlayer2.GetMetadata 2>/dev/null)
