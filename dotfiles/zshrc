@@ -85,8 +85,6 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/g
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-[[ -s "/home/ellis/.gvm/scripts/gvm" ]] && source "/home/ellis/.gvm/scripts/gvm"
-
 # rbenv
 if [[ -d "$HOME/.rbenv" ]]; then
     export PATH="$HOME/.rbenv/bin:$PATH"
