@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# =============================================================================
+#   Link dotfiles
+# =============================================================================
+
 for file in $PWD/dotfiles/*; do
     if [[ ! -L "$HOME/.$(basename $file)" ]]; then
         rm -f "$HOME/.$(basename $file)~"
@@ -9,3 +13,16 @@ for file in $PWD/dotfiles/*; do
     rm -f "$HOME/.$(basename $file)"
     ln -sf "$file" "$HOME/.$(basename $file)"
 done
+
+# =============================================================================
+#   Install fonts
+# =============================================================================
+
+if [[ ! -f /usr/share/fonts/PowerlineSymbols.otf ]]; then
+    sudo cp $PWD/fonts/PowerlineSymbols.otf /usr/share/fonts/
+    fc-cache -vf ~/usr/share/fonts/
+fi
+
+if [[ ! -f /etc/fonts/conf.d/10-powerline-symbols.conf ]]; then
+    sudo cp $PWD/fonts/10-powerline-symbols.conf /etc/fonts/conf.d/
+fi
