@@ -1,9 +1,15 @@
 [user]
 	name = Eligijus Vitkauskas
 	email = eligijusvitkauskas@gmail.com
+
 [core]
 	excludesfile = ~/.gitignore
+
 [push]
 	default = simple
+
+[pull]
+	rebase = true
+
 [include]
 	path = ~/.gitconfig-local
