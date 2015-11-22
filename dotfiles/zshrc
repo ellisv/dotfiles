@@ -109,3 +109,6 @@ if [[ -d /usr/local/go/bin ]]; then
     export GOPATH=$HOME/.golang
     export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 fi
+
+# Disable XON/XOFF flow control
+stty -ixon
