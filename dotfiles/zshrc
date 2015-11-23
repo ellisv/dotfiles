@@ -110,5 +110,8 @@ if [[ -d /usr/local/go/bin ]]; then
     export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 fi
 
+# Source fzf configuration
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 # Disable XON/XOFF flow control
 stty -ixon
