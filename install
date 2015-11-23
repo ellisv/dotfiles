@@ -1,10 +1,12 @@
 #!/bin/bash
 
+SCRIPTPATH=$( cd $(dirname $0) ; pwd -P )
+
 # =============================================================================
 #   Link dotfiles
 # =============================================================================
 
-for file in $PWD/dotfiles/*; do
+for file in $SCRIPTPATH/dotfiles/*; do
     if [[ ! -L "$HOME/.$(basename $file)" ]]; then
         rm -f "$HOME/.$(basename $file)~"
         mv "$HOME/.$(basename $file)" "$HOME/.$(basename $file)~"
@@ -19,10 +21,10 @@ done
 # =============================================================================
 
 if [[ ! -f /usr/share/fonts/PowerlineSymbols.otf ]]; then
-    sudo cp $PWD/fonts/PowerlineSymbols.otf /usr/share/fonts/
+    sudo cp $SCRIPTPATH/fonts/PowerlineSymbols.otf /usr/share/fonts/
     fc-cache -vf ~/usr/share/fonts/
 fi
 
 if [[ ! -f /etc/fonts/conf.d/10-powerline-symbols.conf ]]; then
-    sudo cp $PWD/fonts/10-powerline-symbols.conf /etc/fonts/conf.d/
+    sudo cp $SCRIPTPATH/fonts/10-powerline-symbols.conf /etc/fonts/conf.d/
 fi
