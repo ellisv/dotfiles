@@ -116,5 +116,11 @@ fi
 # Disable XON/XOFF flow control
 stty -ixon
 
+# Use git-radar if available on prompt (robbyrussell theme)
+if [[ -f ~/.git-radar/git-radar ]]; then
+    export GIT_RADAR_COLOR_BRANCH="$fg_bold[red]"
+    PROMPT='${ret_status}%{$fg_bold[green]%}%p %{$fg[cyan]%}%c$(~/.git-radar/git-radar --zsh)%{$fg_bold[blue]%} % %{$reset_color%}'
+fi
+
 # added by travis gem
 [ -f /home/ellis/.travis/travis.sh ] && source /home/ellis/.travis/travis.sh
