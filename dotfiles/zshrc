@@ -115,3 +115,6 @@ fi
 
 # Disable XON/XOFF flow control
 stty -ixon
+
+# added by travis gem
+[ -f /home/ellis/.travis/travis.sh ] && source /home/ellis/.travis/travis.sh
