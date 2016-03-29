@@ -8,4 +8,7 @@ spotify_bus = session_bus.get_object('org.mpris.MediaPlayer2.spotify', '/org/mpr
 spotify_properties = dbus.Interface(spotify_bus, 'org.freedesktop.DBus.Properties')
 metadata = spotify_properties.Get('org.mpris.MediaPlayer2.Player', 'Metadata')
 
-print '♫', metadata['xesam:artist'][0], '-', metadata['xesam:title']
+title = metadata['xesam:artist'][0] + ' - ' + metadata['xesam:title']
+title = (title[:35] + '...') if len(title) > 38 else title
+
+print '♫', title
