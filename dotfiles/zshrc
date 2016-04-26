@@ -95,6 +95,8 @@ alias php-debug='php -d "zend_extension=xdebug.so" \
     -d "xdebug.remote_enable=on" \
     -d "xdebug.remote_handler=dbgp" \
     -d "xdebug.remote_port=9001"'
+alias sfserverstart="sudo php5enmod xdebug; app/console server:start; sudo php5dismod xdebug"
+alias sfserverstop="app/console server:stop"
 
 # rbenv
 if [[ -d "$HOME/.rbenv" ]]; then
