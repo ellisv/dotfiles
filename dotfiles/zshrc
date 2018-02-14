@@ -111,7 +111,7 @@ fi
 
 # Use binary files from GoLang package
 if [[ -d /usr/local/go/bin ]]; then
-    export GOPATH=$HOME/.golang
+    export GOPATH=$HOME/go
     export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 fi
 
