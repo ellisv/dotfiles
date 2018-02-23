@@ -3,6 +3,7 @@
 	email = eligijusvitkauskas@gmail.com
 
 [core]
+	editor = vim
 	excludesfile = ~/.gitignore
 
 [push]
