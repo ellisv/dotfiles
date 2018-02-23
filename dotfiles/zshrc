@@ -87,17 +87,6 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/g
 alias phptags="ctags -R --PHP-kinds=+cf"
 alias phpvendortags="ctags -R --PHP-kinds=+cf -f tags.vendors vendor"
 
-# PHP XDebug support
-# Usually XDebug should be disabled by default to have a better performance
-export XDEBUG_CONFIG=""
-alias php-debug='php -d "zend_extension=xdebug.so" \
-    -d "xdebug.max_nesting_level=250" \
-    -d "xdebug.remote_enable=on" \
-    -d "xdebug.remote_handler=dbgp" \
-    -d "xdebug.remote_port=9001"'
-alias sfserverstart="sudo php5enmod xdebug; app/console server:start; sudo php5dismod xdebug"
-alias sfserverstop="app/console server:stop"
-
 # rbenv
 if [[ -d "$HOME/.rbenv" ]]; then
     export PATH="$HOME/.rbenv/bin:$PATH"
