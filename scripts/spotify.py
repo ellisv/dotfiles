@@ -22,7 +22,7 @@ class SpotifyControl:
         title = metadata['xesam:artist'][0] + ' - ' + metadata['xesam:title']
         trimmed_title = (title[:35] + '...') if len(title) > 38 else title
 
-        print '♫', trimmed_title
+        print u'#[fg=black,bg=colour35] ♫ #[fg=white,bg=colour236] {} '.format(trimmed_title).encode('utf-8')
 
     def send(self, signal):
         player = dbus.Interface(self.bus, 'org.mpris.MediaPlayer2.Player')
