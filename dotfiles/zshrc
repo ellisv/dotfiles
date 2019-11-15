@@ -84,8 +84,6 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/g
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias phptags="ctags -R --PHP-kinds=+cf"
-alias phpvendortags="ctags -R --PHP-kinds=+cf -f tags.vendors vendor"
 
 # rbenv
 if [[ -d "$HOME/.rbenv" ]]; then
