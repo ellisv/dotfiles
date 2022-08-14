@@ -119,6 +119,10 @@ fi
 if [[ -d /usr/local/go/bin ]]; then
     export GOPATH=$HOME/go
     export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+elif [[ -d /opt/homebrew/opt/go/libexec ]]; then
+    export GOPATH=$HOME/go
+    export GOROOT=/opt/homebrew/opt/go/libexec
+    export PATH=$PATH:$GOTPATH/bin:$GOROOT/bin
 fi
 
 # Source fzf configuration
