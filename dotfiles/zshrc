@@ -152,7 +152,7 @@ if [[ -d "$HOME/.local/share/pnpm" ]]; then
     export PATH="$PNPM_HOME:$PATH"
 fi
 
-[ -f ~/.zshrc-local ] && source ~/.zshrc-local
+[ -f ~/.zshrc_local ] && source ~/.zshrc_local
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 if [[ -d "$HOME/.sdkman" ]]; then

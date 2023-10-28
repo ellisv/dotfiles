@@ -4,3 +4,6 @@
 .project
 tags
 tags.vendors
+.DS_Store
+__debug_bin*
+.vscode
