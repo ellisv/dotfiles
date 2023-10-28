@@ -8,8 +8,6 @@ Setup
 
 ```
 make
-sudo make setupfonts
-make fontcache
 ```
 
 Installing Source Code Pro Fonts
