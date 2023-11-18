@@ -122,7 +122,7 @@ if [[ -d /usr/local/go/bin ]]; then
 elif [[ -d /opt/homebrew/opt/go/libexec ]]; then
     export GOPATH=$HOME/go
     export GOROOT=/opt/homebrew/opt/go/libexec
-    export PATH=$PATH:$GOTPATH/bin:$GOROOT/bin
+    export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
 fi
 
 # Source fzf configuration
