@@ -8,3 +8,4 @@ tags.vendors
 __debug_bin*
 .vscode
 .ropeproject/
+.venv/
