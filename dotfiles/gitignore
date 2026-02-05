@@ -9,3 +9,5 @@ __debug_bin*
 .vscode
 .ropeproject/
 .venv/
+.claude/settings.local.json
+.ruff_cache
