@@ -11,3 +11,6 @@ __debug_bin*
 .venv/
 .claude/settings.local.json
 .ruff_cache
+.mypy_cache
+.secrets/
+.env.local
